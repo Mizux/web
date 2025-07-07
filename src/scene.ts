@@ -4,8 +4,8 @@ import { toggleFullScreen } from "./helpers/fullscreen";
 import "./style.css";
 
 const CANVAS_ID = "scene";
-
 let canvas: HTMLElement;
+
 let stats: Stats;
 let gui: GUI;
 
@@ -18,6 +18,15 @@ function init() {
     canvas = document.querySelector(`canvas#${CANVAS_ID}`)!;
   }
 
+  // ===== 🕹️ CONTROLS =====
+  {
+    // Full screen
+    window.addEventListener("dblclick", (event) => {
+      if (event.target === canvas) {
+        toggleFullScreen(canvas);
+      }
+    });
+  }
 
   // ===== 📈 STATS & CLOCK =====
   {
@@ -29,7 +38,7 @@ function init() {
   {
     gui = new GUI({ title: "🐞 Debug GUI", width: 300 });
 
-    const canvasFolder = gui.addFolder("Canvas");
+    //const canvasFolder = gui.addFolder("Canvas");
     // canvasFolder
     //   .add(cube.position, "x")
     //   .min(-5)
