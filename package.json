@@ -15,7 +15,7 @@
     "@types/stats.js": "^0.17.4",
     "prettier": "^3.5.3",
     "typescript": "^5.9.2",
-    "vite": "^7.0.5"
+    "vite": "^7.0.6"
   },
   "dependencies": {
     "lil-gui": "^0.20.0",
